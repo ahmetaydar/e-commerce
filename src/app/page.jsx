@@ -31,7 +31,7 @@ const Page = () => {
 
   const fetchProducts = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/api/products`);
+      const { data } = await axios.get(`/api/products`);
       let filteredProducts = data.data.filter(
         (product) => product.category === activeCategory
       );
