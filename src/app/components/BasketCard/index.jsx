@@ -8,11 +8,11 @@ const BasketCard = () => {
   const dispatch = useDispatch();
   const totalPrice = useSelector(cartTotalPriceSelector);
   return (
-    <div className="border-x-8 border-y-[8.18px] border-primary rounded-2 w-[296px] pl-[22px] pt-[26px]">
+    <div className="border-x-8 border-y-[8.18px] border-primary rounded-2 w-[296px] pl-[22px] pt-[26px] max-h-[320px]  overflow-auto ">
       {cart.map((product) => (
         <div
           key={product.id}
-          className="flex flex-row justify-between items-center px-4 py-2 border-b"
+          className="flex flex-row justify-between items-center px-4 py-2 border-b "
         >
           <div className="flex flex-col items-start">
             <div className="text-sm font-normal flex justify-start px-2">
@@ -25,17 +25,6 @@ const BasketCard = () => {
           </div>
           <div className="flex flex-row gap-2">
             <button
-              className="text-primary text-sm font-semibold  "
-              onClick={() => {
-                dispatch(increament(product.id));
-              }}
-            >
-              +
-            </button>
-            <div className="bg-primary text-white w-8 h-8 flex justify-center items-center border rounded">
-              {product.quantity}
-            </div>
-            <button
               className="text-primary text-sm font-semibold "
               onClick={() => {
                 dispatch(decrement(product.id));
@@ -43,6 +32,17 @@ const BasketCard = () => {
               disabled={product.quantity === 1}
             >
               -
+            </button>
+            <div className="bg-primary text-white w-8 h-8 flex justify-center items-center border rounded">
+              {product.quantity}
+            </div>
+            <button
+              className="text-primary text-sm font-semibold  "
+              onClick={() => {
+                dispatch(increament(product.id));
+              }}
+            >
+              +
             </button>
           </div>
         </div>

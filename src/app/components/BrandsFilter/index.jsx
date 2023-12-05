@@ -37,7 +37,7 @@ const BrandsFilter = ({ setSelectedBrand, products }) => {
       <h1 className="text-greyscale500 text-[13px] font-semibold mb-3">
         Brands
       </h1>
-      <div className="w-[296px] h-[244px] container bg-white rounded-sm border-noneshadow-sm p-6 hover:border-black300  ">
+      <div className="w-[296px] h-[244px] container bg-white rounded-sm border-none shadow-sm p-6 hover:border-black300  ">
         <input
           type="text"
           placeholder="Search Brand"

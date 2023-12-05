@@ -159,7 +159,7 @@ const Page = () => {
               />
             </div>
           </section>
-          <aside className="w-[416px] mt-10 ">
+          <aside className="w-[416px] mt-10 ml-4 ">
             {" "}
             <BasketCard />
           </aside>
