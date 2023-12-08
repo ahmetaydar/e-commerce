@@ -29,7 +29,6 @@ const TagsFilter = ({ setSelectedTags, products, selectedTags }) => {
             return products.filter((product) => product.tags === tags).length;
         }
     };
-    console.log(selectedTags, "selectedTags");
 
     return (
         <div className="pl-[104px] pt-5">

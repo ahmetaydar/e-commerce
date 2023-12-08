@@ -60,7 +60,7 @@ const BrandsFilter = ({ setSelectedBrand, products, selectedBrand }) => {
                                         alt="square"
                                     />
                                 </span>
-                                <span className="hover:cursor-pointer w-[22px] h-[22px] "></span>
+
                                 <span className="text-black600 font-normal text-sm tracking-wide">
                                     {brand}
                                 </span>
